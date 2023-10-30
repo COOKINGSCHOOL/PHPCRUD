@@ -61,11 +61,13 @@
     <a href="home.php">Voltar</a>
     <div>
         <h1>Login</h1>
-        <input type="text" placeholder="Nome">
+        <form action="" method="POST">
+        <input type="text" name="email" placeholder="Email">
         <br><br>
-        <input type="password" placeholder="Senha">
+        <input type="password" name="senha" placeholder="Senha">
         <br><br>
-        <button>Enviar</button>
+        <button>Enviar</button> 
+        </form>
     </div>
 </body>
 

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SITE</title>
     <style>
-        body{
+        body {
             font-family: Arial, Helvetica, sans-serif;
             background: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
             text-align: center;
@@ -14,10 +15,11 @@
             background-image: url(/images/comida-saludable.jpg);
             background-size: cover;
             margin: 200px;
-            
-            
+
+
         }
-        .box{
+
+        .box {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -27,24 +29,28 @@
             border-radius: 10px;
 
         }
-        a{
+
+        a {
             text-decoration: none;
             color: white;
             border: 3px solid dodgerblue;
             border-radius: 10px;
             padding: 10px;
         }
-        a:hover{
+
+        a:hover {
             background-color: dodgerblue;
         }
     </style>
 </head>
+
 <body>
-    <h1>COOKING SCHOOL</h1> 
+    <h1>COOKING SCHOOL</h1>
     <h2>Vem cozinhar com a gente!</h2>
     <div class="box">
         <a href="login.php">Login</a>
         <a href="formulario.php">Cadastre-se</a>
     </div>
 </body>
+
 </html>

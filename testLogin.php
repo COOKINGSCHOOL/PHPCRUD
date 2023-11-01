@@ -24,7 +24,7 @@
         }
         else
         {
-            header('Location: restaurante.php');
+            header('Location: restaurante.html');
         }
     }
     else

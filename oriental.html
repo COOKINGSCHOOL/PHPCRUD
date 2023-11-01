@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORIENTAL</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+        * {
+            font-family: 'Nunito', sans-serif;
+            font-size: 18px;
+
+        }
+
+        body {
+            background-image: url(images/cozinhadefundo.jpg);
+            background-size: 100% 100%;
+            background-position: center;
+            background-attachment: fixed;
+
+
+            color: yellow;
+
+        }
+        .titulo{
+            
+            color: var(--firstcolor);
+            background-color: black;
+            display: inline-block;
+            text-align: center;
+            margin-left: 44.5%;
+            
+        }
+        .navbar a {
+            text-decoration: none;
+            margin-left: 70rem;
+            padding: 0.5rem;
+            color: var(--firstcolor);
+            background-color: black;
+        }
+
+        #sidebar a {
+            color: yellow;
+
+        }
+
+        .recipe-content {
+            text-align: center;
+            align-items: center;
+            max-width: 200%;
+            color: white;
+        }
+
+        h2 {
+            font-size: 23px;
+            color: yellow;
+
+        }
+
+        .tomate {
+            color: yellow;
+            font-size: 20;
+
+        }
+
+        .fundo-branco {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+        }
+
+        .fundo-preto {
+            background-color: black;
+        }
+    </style>
+
+</head>
+<header>
+    <nav class="navbar">
+        <a href="restaurante.html">Voltar</a>
+    </nav>
+    <nav class="titulo">
+        <h1>RECEITAS ORIENTAIS</h1>
+    </nav>
+
+        <body>
+            <div id="sidebar">
+                <ul>
+                    <li><a href="#" onclick="showRecipe('recipe1')"><span class="fundo-preto">FRANGO XADREZ</span></a>
+                        <div id="recipe1" class="recipe-content">
+
+                            <h2><span class="fundo-preto">Frango Xadrez</span></h2>
+                            <img src="images/frangoxadrez.jpg">
+
+                            <h2><span class="fundo-preto">Ingredientes(04 porções)</span></h2>
+                            <span class="fundo-branco">
+                                500g de peito de frango, cortado em cubos<br>
+                                1 pimentão vermelho, cortado em pedaços<br>
+                                1 pimentão verde, cortado em pedaços<br>
+                                1 cebola, cortada em pedaços<br>
+                                2 dentes de alho, picados<br>
+                                1 colher de sopa de óleo de gergelim<br>
+                                2 colheres de sopa de óleo de cozinha<br>
+                                3 colheres de sopa de molho de soja<br>
+                                2 colheres de sopa de ketchup<br>
+                                1 colher de sopa de açúcar<br>
+                                1 colher de chá de amido de milho (maisena) dissolvido em 2 colheres de sopa de água<br>
+                                Sal e pimenta a gosto</span>
+
+                            <h2><span class="fundo-preto">Modo de Preparo</span></h2>
+                            <span class="fundo-branco">
+                                1- Em uma tigela, misture o frango com 2 colheres de sopa de molho de soja, o açúcar e
+                                um pouco
+                                de pimenta.<br>
+                                2-Deixe marinar por 15 minutos.<br>
+                                3- Em uma frigideira grande, aqueça o óleo de cozinha em fogo médio-alto.<br>
+                                4- o frango marinado e cozinhe até dourar.<br>
+                                5- o frango da frigideira e reserve.<br>
+                                6- Na mesma frigideira, adicione o óleo de gergelim e refogue a cebola e o alho até
+                                ficarem
+                                macios.<br>
+                                7- Adicione os pimentões e continue refogando por mais alguns minutos.<br>
+                                8- Em seguida, adicione o frango de volta à frigideira e misture bem.<br>
+                                9- Em uma tigela pequena, misture o ketchup, o restante do molho de soja e o amido de
+                                milho
+                                dissolvido em água.<br>
+                                10- Despeje essa mistura sobre o frango e mexa até que o molho engrosse.<br>
+                                11- Cozinhe por mais alguns minutos, ajuste o tempero com sal e pimenta a gosto e sirva
+                                quente
+                                com arroz.</span>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="showRecipe('recipe2')"><span class="fundo-preto">YAKISOBA</span></a>
+                        <div id="recipe2" class="recipe-content">
+                            <h2><span class="fundo-preto">Yakisoba</span></h2>
+                            <img src="images/como-fazer-yakisoba-1 (1).jpg">
+
+                            <h2><span class="fundo-preto">Ingredientes(04 porções)</span></h2>
+                            <span class="fundo-branco">
+                                200g de macarrão para yakisoba (macarrão de ovo)<br>
+                                200g de peito de frango, cortado em tiras finas<br>
+                                1 cenoura, cortada em tiras finas<br>
+                                1 pimentão vermelho, cortado em tiras finas<br>
+                                1 cebola, cortada em tiras finas<br>
+                                100g de repolho, cortado em tiras finas<br>
+                                2 dentes de alho, picados<br>
+                                2 colheres de sopa de óleo de gergelim<br>
+                                3 colheres de sopa de molho de soja<br>
+                                2 colheres de sopa de molho de ostra<br>
+                                Sal e pimenta a gosto</span>
+
+                            <h2><span class="fundo-preto">Modo de Preparo</span></h2>
+                            <span class="fundo-branco">
+                                1- o macarrão de acordo com as instruções da embalagem.<br>
+                                2- Escorra e reserve.<br>
+                                3- Em uma frigideira grande, aqueça o óleo de gergelim em fogo médio-alto.<br>
+                                4- Adicione o frango e refogue até dourar.<br>
+                                5- Acrescente a cebola, o alho, a cenoura, o pimentão e o repolho.<br>
+                                6- Refogue por alguns minutos até que os legumes fiquem macios.<br>
+                                7- Adicione o macarrão cozido à frigideira e regue com molho de soja e molho de
+                                ostra.<br>
+                                8- Misture bem até que todos os ingredientes estejam bem incorporados e o macarrão
+                                esteja bem
+                                aquecido.<br>
+                                9- Tempere com sal e pimenta a gosto e sirva quente</span>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="showRecipe('recipe3')"><span class="fundo-preto">SUSHI DE SALMÃO</span></a>
+                        <div id="recipe3" class="recipe-content">
+
+                            <h2><span class="fundo-preto">Sushi de Salmão</span></h2>
+                            <img src="images/receita-de-sushi.jpg">
+
+                            <h2><span class="fundo-preto">Ingredientes(04 porções)</span></h2>
+                            <span class="fundo-branco">
+                                1 xícara de arroz para sushi<br>
+                                2 colheres de sopa de vinagre de arroz<br>
+                                1 colher de sopa de açúcar<br>
+                                1 colher de chá de sal<br>
+                                2 folhas de alga nori<br>
+                                200g de salmão fresco, cortado em tiras finas<br>
+                                Abacate, pepino e cenoura em tiras finas (opcional)<br>
+                                Wasabi e molho de soja para servir</span>
+
+                            <h2><span class="fundo-preto">Modo de Preparo</span></h2>
+                            <span class="fundo-branco">
+                                1- Cozinhe o arroz de acordo com as instruções da embalagem.<br>
+                                2- Em uma tigela pequena, misture o vinagre de arroz, açúcar e sal.<br>
+                                3- Despeje essa mistura sobre o arroz cozido e misture bem.<br>
+                                4- Coloque uma esteira de bambu sobre uma superfície plana e cubra-a com filme
+                                plástico.<br>
+                                5- Coloque uma folha de nori sobre o filme plástico.<br>
+                                6- Molhe as mãos com água e pegue um pouco de arroz preparado.<br>
+                                7- Espalhe-o uniformemente sobre a folha de nori, deixando um espaço de cerca de 1,5 cm
+                                na borda superior.<br>
+                                8- Coloque tiras de salmão (e outros ingredientes, se desejar) sobre o arroz.<br>
+                                9- Usando a esteira de bambu, enrole o sushi firmemente, começando pela borda
+                                inferior.<br>
+                                10- Pressione suavemente para selar.<br>
+                                11- Repita o processo com a segunda folha de nori e os ingredientes restantes.<br>
+                                12- Corte os rolos em pedaços de sushi e sirva com wasabi e molho de soja.</span>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <script>
+                function showRecipe(recipe) {
+                    // Verifica se a receita já está sendo exibida
+                    var recipeElement = document.getElementById(recipe);
+                    if (recipeElement.style.display === 'block') {
+                        // Oculta a receita
+                        recipeElement.style.display = 'none';
+                    } else {
+                        // Oculta todas as receitas
+                        var recipes = document.getElementsByClassName('recipe-content');
+                        for (var i = 0; i < recipes.length; i++) {
+                            recipes[i].style.display = 'none';
+                        }
+
+                        // Exibe a receita selecionada
+                        recipeElement.style.display = 'block';
+                    }
+                }
+            </script>
+
+        </body>
+
+</html>

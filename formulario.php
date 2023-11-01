@@ -14,9 +14,16 @@ if (isset($_POST['submit'])) {
     $telefone = $_POST['telefone'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
+   
 
     $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,telefone,email,senha) VALUES ('$nome','$telefone','$email','$senha')");
+    if ($result) {
+        $mensagem = 'Cadastrado com sucesso!';
+    } else {
+        $mensagem = 'Erro ao cadastrar.';
+    }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="ptbr">
@@ -114,6 +121,11 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
+    <!-- Se houver uma mensagem, exiba-a na parte superior do formulário -->
+    <?php if (!empty($mensagem)): ?>
+    <div style="background-color: green; color: white; text-align: center; padding: 5px;"><?php echo $mensagem; ?></div>
+    <?php endif; ?>
+
     <a href="home.php">Voltar</a>
     <div class="box">
         <form action="formulario.php" method="POST">

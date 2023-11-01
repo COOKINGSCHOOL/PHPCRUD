@@ -58,6 +58,7 @@
 </head>
 
 <body>
+    <body>
     <a href="home.php">Voltar</a>
     <div>
         <h1>Login</h1>

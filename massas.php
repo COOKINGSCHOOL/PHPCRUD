@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASSAS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+        * {
+            font-family: 'Nunito', sans-serif;
+            font-size: 18px;
+
+        }
+
+        body {
+            background-image: url(images/cozinhadefundo.jpg);
+            background-size: 100% 100%;
+            background-position: center;
+            background-attachment: fixed;
+
+
+            color: yellow;
+
+        }
+
+        #sidebar a {
+            color: yellow;
+
+        }
+
+        .recipe-content {
+            text-align: center;
+            align-items: center;
+            max-width: 200%;
+            color: white;
+        }
+
+        h2 {
+            font-size: 23px;
+            color: yellow;
+
+        }
+
+        .tomate {
+            color: yellow;
+            font-size: 20;
+
+        }
+
+        .fundo-branco {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+        }
+
+        .fundo-preto {
+            background-color: black;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="sidebar">
+        <ul>
+            <li><a href="#" onclick="showRecipe('recipe1')"><span class="fundo-preto">LASANHA DE QUEIJO E
+                        PRESUNTO</span></a>
+                <div id="recipe1" class="recipe-content">
+
+                    <h2><span class="fundo-preto">Lasanha de Queijo e Presunto</span></h2>
+                    <img src="images/lasanhadequeijo.jpg">
+
+                    <h2><span class="fundo-preto">Ingredientes(10 porções)</span></h2>
+
+                    <span class="fundo-branco">
+                        1 pacote de massa fresca para lasanha 400 g (dispensa cozimento)<br>
+                        300 g de mussarela em tirinhas<br>
+                        300 g de presunto em tirinhas<br>
+                        Queijo parmesão ralado a gosto para polvilhar</span>
+
+                    <h2><span class="fundo-preto">Molho de tomate</span></h2>
+
+                    <span class="fundo-branco">
+                        1 cebola picadinha<br>
+                        3 colheres (sopa) de azeite<br>
+                        1 caixa de molho de tomate pronto de 520g<br>
+                        250 ml de água<br>
+                        Salsinha a gosto</span>
+
+                    <h2><span class="fundo-preto">Modo de Preparo</span></h2>
+
+                    <p class="tomate"><span class="fundo-preto">Molho de Tomate</span> </p>
+
+                    <span class="fundo-branco">
+                        1- Doure a cebola e o alho no azeite, acrescente os tomates, o molho pronto, o caldo de galinha,
+                        o açúcar e a água.<br>
+                        2- Deixe apurar por 15 a 20 minutos.<br>
+                        3- Coloque a salsinha e desligue o fogo.</span>
+
+
+                    <p class="tomate"><span class="fundo-preto">Montagem</span></p>
+                    <span class="fundo-branco">
+                        4- Em uma travessa, coloque um pouco do molho de tomate.<br>
+                        5- Faça as camadas de massa de lasanha, presunto, mussarela, molho de tomate e molho branco até
+                        terminar.<br>
+                        6- Polvilhe comqueijo parmesão ralado e leve ao forno preaquecido, por 30 a 40 minutos, coberto
+                        com papel
+                        alumínio, retirando no final.<br>
+                        7- Desligue e espere uns 10 minutos para servir.</span>
+
+                </div>
+            </li>
+            <li><a href="#" onclick="showRecipe('recipe2')"><span class="fundo-preto">PANQUECA DE CARNE MOÍDA</span></a>
+                <div id="recipe2" class="recipe-content">
+
+                    <h2><span class="fundo-preto">Panqueca de Carne Moída</span></h2>
+
+                    <img src="images/panqueca-de-carne-moida-1.jpg">
+
+                    <h2><span class="fundo-preto">Ingredientes(10 porções)</span></h2>
+
+                    <span class="fundo-branco">
+                        1 e 1/2 xícara (chá) de farinha de trigo<br>
+                        1 xícara (chá) de leite<br>
+                        2 ovos<br>
+                        4 colheres(sopa) de óleo<br>
+                        Sal a gosto<br>
+                        300 g de carne moída<br>
+                        2 colheres (sopa) de cebola picada ou ralada<br>
+                        1/2 tomate cortado em cubos<br>
+                        1/2 lata de extrato de tomate<br>
+                        1 caixa de creme de leite<br>
+                        400 g de muçarela fatiado<br>
+                        Queijo ralado a gosto</span>
+
+                    <h2><span class="fundo-preto">Modo de Preparo</span></h2>
+
+                    <p class="tomate"><span class="fundo-preto">Massa</span></p>
+
+                    <span class="fundo-branco">
+                        1- Bata no liquidificador os ovos, o leite, o óleo, e acrescente a farinha de trigo aos
+                        poucos.<br>
+                        2- Após acrescentar toda a farinha de trigo, adicione sal a gosto.<br>
+                        3- Misture a massa até obter uma consistência cremosa.<br>
+                        4- Com um papel-toalha, espalhe óleo por toda a frigideira e despeje uma concha de massa.<br>
+                        5- Faça movimentos circulares para que a massa se espalhe por toda a frigideira.<br>
+                        6 - Espere até a massa soltar do fundo e vire a massa para fritar do outro lado.</span>
+
+                    <p class="tomate"><span class="fundo-preto">Recheio</span></p>
+                    <span class="fundo-branco">
+                        7- Em uma panela, doure a cebola com o óleo e acrescente a carne.<br>
+                        8- Deixe cozinhar até que saia água da carne, diminua o fogo e tampe.<br>
+                        9- Acrescente o tomate picado e tampe novamente.<br>
+                        10- Deixe cozinhar por mais 3 minutos e misture.<br>
+                        11- Acrescente o extrato de tomate e temperos a gosto.<br>
+                        12- Deixe cozinhar por mais 10 minutos.<br>
+                        13- Quando o molho engrossar, desligue o fogo.<br>
+                        14- Deixe esfriar o molho, acrescente o creme de leite e misture bem.<br>
+                        15- Quando estiver bem homogêneo, leve novamente ao fogo e deixe cozinhar em fogo baixo por mais 5 minutos.</span>
+
+
+                    <p class="tomate"><span class="fundo-preto">Montagem</span></p>
+
+                    <span class="fundo-branco">
+                        16- Recheie a panqueca com uma fatia de mussarela, uma porção de carne e enrole.<br>
+                        17- Faça esse processo com todas as panquecas.<br>
+                        18- Despeje um pouco de caldo no fundo de um refratário, para untar.<br>
+                        19- Disponha as panquecas já prontas no refratário e despeje sobre elas o restante do molho.<br>
+                        20- Polvilhe queijo ralado sobre as panquecas.<br>
+                        21- Leve ao forno para gratinar, em fogo médio, por 20 minutos ou até que o queijo esteja derretido.</span>
+
+                </div>
+            </li>
+            <li><a href="#" onclick="showRecipe('recipe3')"><span class="fundo-preto">PIZZA DE LIQUIDIFICADOR FÁCIL</span></a>
+                <div id="recipe3" class="recipe-content">
+
+                    <h2><span class="fundo-preto">Pizza de Liquidificador Fácil</span></h2>
+                    <img src="images/Pizza-de-liquidificador.jpg">
+
+                    <h2><span class="fundo-preto">Ingredientes(10 porções</span>)</h2>
+                    <span class="fundo-branco">
+                        1 xícara (chá) de leite<br>
+                        1 ovo<br>
+                        1 colher (chá) de sal<br>
+                        1 colher (chá) de açucar<br>
+                        1 colher (sopa) de margarina<br>
+                        1 e 1/2 xícara (chá) de farinha de trigo<br>
+                        1 colher (sobremesa) de fermento em pó<br>
+                        1/2 lata de molho de tomate</span>
+
+                    <h2><span class="fundo-preto">Sugestão de Recheio</span></h2>
+                    <span class="fundo-branco">
+                        250 g de mussarela ralada grossa<br>
+                        2 tomates fatiados<br>
+                        Azeitona picada<br>
+                        Orégano a gosto</span>
+
+                    <h2><span class="fundo-preto">Modo de Preparo</span></h2>
+                    <span class="fundo-branco">
+                        1- No liquidificador bata o leite, o ovo, o sal, o açúcar, a margarina, a farinha de trigo e o
+                        fermento em pó até que tudo esteja encorporado.<br>
+                        2- Despeje a massa em uma assadeira para pizza untada com margarina e leve ao forno preaquecido
+                        por 20 minutos.<br>
+                        3- Retire do forno e despeje o molho de tomate.<br>
+                        4- Cubra a massa com mussarela ralada, tomate e orégano a gosto.<br>
+                        5- Leve novamente ao forno até derreter a mussarela.</span>
+
+
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function showRecipe(recipe) {
+            // Verifica se a receita já está sendo exibida
+            var recipeElement = document.getElementById(recipe);
+            if (recipeElement.style.display === 'block') {
+                // Oculta a receita
+                recipeElement.style.display = 'none';
+            } else {
+                // Oculta todas as receitas
+                var recipes = document.getElementsByClassName('recipe-content');
+                for (var i = 0; i < recipes.length; i++) {
+                    recipes[i].style.display = 'none';
+                }
+
+                // Exibe a receita selecionada
+                recipeElement.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

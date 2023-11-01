@@ -92,7 +92,7 @@
 
         .left-content h2 {
             color: var(--secondcolor);
-            font-size: 35px;
+            font-size: 28px;
             padding: 1rem 0;
             line-height: 2.5rem;
         }
@@ -414,11 +414,6 @@
         }
 
 
-
-
-
-
-
         @media(max-width:768px) {
             html {
                 font-size: 60%;
@@ -511,6 +506,7 @@
         <nav class="navbar">
 
             <a href="#">Início</a>
+            <a href="home.php">Voltar</a>
         </nav>
 
 
@@ -525,9 +521,9 @@
             <div class="inner-home-section">
                 <div class="left-content">
                     <h2>NÃO É SÓ COMER, É EXPERIMENTAR</h2>
-                    <p>Na cozinha, as receitas se transformam em obras de arte,
-                        onde os ingredientes são os pigmentos e o chef é o artista,
-                        criando sabores que encantam todos os sentidos.</p>
+                    <p><strong> Na cozinha, as receitas se transformam em obras de arte,
+                            onde os ingredientes são os pigmentos e o chef é o artista,
+                            criando sabores que encantam todos os sentidos.</strong></p>
                 </div>
             </div>
             <div class="inner-home-section">
@@ -560,7 +556,7 @@
                 <div class="fav-content">
                     <h3>Massas</h3>
                     <p>Aqui você encontra as melhores receitas de massas do mundo</p>
-                    <a href="massas.html">Ver receitas</a>
+                    <a href="massas.php">Ver receitas</a>
                 </div>
 
             </div>
@@ -707,7 +703,7 @@
 
             <div class="inner-footer">
                 <h2>Email</h2>
-                <a href="anthony343522@gmail.com">anthony343522@gmail.com</a>
+                <a href="#">CookingSchool@gmail.com</a>
             </div>
         </div>
     </div>

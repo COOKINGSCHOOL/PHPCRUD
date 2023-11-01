@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -31,7 +31,7 @@
             font-size: 15px;
         }
 
-        .inputSubmit{
+        .inputSubmit {
             background-color: dodgerblue;
             border: none;
             padding: 15px;
@@ -42,7 +42,7 @@
 
         }
 
-        .inputSubmit:hover{
+        .inputSubmit:hover {
             background-color: deepskyblue;
             cursor: pointer;
         }
@@ -58,19 +58,20 @@
 </head>
 
 <body>
+
     <body>
-    <a href="home.php">Voltar</a>
-    <div>
-        <h1>Login</h1>
-        <form action="testLogin.php" method="POST">
-        <input type="text" name="email" placeholder="Email">
-        <br><br>
-        <input type="password" name="senha" placeholder="Senha">
-        <br><br>
-        <input class="inputSubmit" type="submit" name="submit" value="Enviar">
-        
-        </form>
-    </div>
-</body>
+        <a href="home.php">Voltar</a>
+        <div>
+            <h1>Login</h1>
+            <form action="testLogin.php" method="POST">
+                <input type="text" name="email" placeholder="Email">
+                <br><br>
+                <input type="password" name="senha" placeholder="Senha">
+                <br><br>
+                <input class="inputSubmit" type="submit" name="submit" value="Enviar">
+
+            </form>
+        </div>
+    </body>
 
 </html>

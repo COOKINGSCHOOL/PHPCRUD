@@ -1,10 +1,10 @@
 <?php
-    $dbHost = 'Localhost';
-    $dbUsername = 'root';
-    $dbPassword = '';
-    $dbName = 'formulario-amt';
+$dbHost = 'Localhost';
+$dbUsername = 'root';
+$dbPassword = '';
+$dbName = 'formulario-amt';
 
-    $conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
+$conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
     //if($conexao->connect_errno)
     //{

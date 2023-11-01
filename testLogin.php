@@ -32,4 +32,3 @@
         //não acessa
         header('Location: login.php');
     }
-?>

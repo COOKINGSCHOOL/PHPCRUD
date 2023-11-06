@@ -12,7 +12,7 @@
             background: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
             text-align: center;
             color: yellow;
-            background-image: url(/images/comida-saludable.jpg);
+            background-image: url(/images/como_comer_saludable_todos_los_dias_71473_600.jpg);
             background-size: cover;
             margin: 200px;
 

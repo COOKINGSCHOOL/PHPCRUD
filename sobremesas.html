@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOBREMESAS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+        * {
+            font-family: 'Nunito', sans-serif;
+            font-size: 18px;
+
+        }
+
+        body {
+            background-image: url(images/cozinhadefundo.jpg);
+            background-size: 100% 100%;
+            background-position: center;
+            background-attachment: fixed;
+
+
+            color: yellow;
+
+        }
+        .titulo{
+            
+            color: var(--firstcolor);
+            background-color: black;
+            display: inline-block;
+            text-align: center;
+            margin-left: 42%;
+            
+        }
+        .navbar a {
+            text-decoration: none;
+            margin-left: 70rem;
+            padding: 0.5rem;
+            color: var(--firstcolor);
+            background-color: black;
+        }
+
+        #sidebar a {
+            color: yellow;
+
+        }
+
+        .recipe-content {
+            text-align: center;
+            align-items: center;
+            max-width: 200%;
+            color: white;
+        }
+
+        h2 {
+            font-size: 23px;
+            color: yellow;
+
+        }
+
+        .tomate {
+            color: yellow;
+            font-size: 20;
+
+        }
+
+        .fundo-branco {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+        }
+
+        .fundo-preto {
+            background-color: black;
+        }
+    </style>
+
+</head>
+<header>
+    <nav class="navbar">
+        <a href="restaurante.html">Voltar</a>
+    </nav>
+    <nav class="titulo">
+        <h1>RECEITAS DE SOBREMESAS</h1>
+    </nav>
+<body>
+
+    <div id="sidebar">
+        <ul>
+            <li><a href="#" onclick="showRecipe('recipe1')"><span class="fundo-preto">MOUSSE DE CHOCOLATE</span></a>
+                <div id="recipe1" class="recipe-content">
+
+                    <h2><span class="fundo-preto">Mousse de Chocolate</span></h2>
+                    <img src="images/mousse_resized.jpg">
+
+                    <h2><span class="fundo-preto">Ingredientes(04 porções)</span></h2>
+
+                    <span class="fundo-branco">
+                        200g de chocolate meio amargo<br>
+                        2 colheres de sopa de açúcar<br>
+                        2 ovos<br>
+                        1 colher de chá de essência de baunilha (opcional)<br>
+                        Uma pitada de sal</span>
+
+                    <h2><span class="fundo-preto">Modo de Preparo</span></h2>
+
+                    <span class="fundo-branco">
+                        1- Derreta o chocolate em banho-maria ou no micro-ondas, mexendo a cada 30 segundos até que
+                        esteja
+                        completamente derretido e liso.<br>
+                        2- Em uma tigela separada, bata os ovos, o açúcar, a essência de baunilha (se estiver usando) e
+                        uma
+                        pitada de sal até obter uma mistura fofa.<br>
+                        3- Misture o chocolate derretido na mistura de ovos até que fique bem incorporado.<br>
+                        4- Despeje a mousse em taças individuais.<br>
+                        5- Leve à geladeira por pelo menos 2 horas antes de servir.</span>
+
+                </div>
+            </li>
+            <li><a href="#" onclick="showRecipe('recipe2')"><span class="fundo-preto">PAVÊ DE MORANGO</span></a>
+                <div id="recipe2" class="recipe-content">
+
+                    <h2><span class="fundo-preto">Pavê de Morango</span></h2>
+                    <img src="images/pave-de-morango-8_resized.jpg">
+
+                    <h2><span class="fundo-preto">Ingredientes(06 porções)</span></h2>
+                    <span class="fundo-preto">
+                        1 pacote de biscoitos tipo champanhe<br>
+                        500g de morangos frescos, fatiados<br>
+                        1 lata de leite condensado<br>
+                        1 lata de creme de leite<br>
+                        1 xícara de leite<br>
+                        2 colheres de sopa de amido de milho<br>
+                        2 colheres de sopa de açúcar</span>
+
+                    <h2><span class="fundo-preto">Modo de Preparo</span></h2>
+                    <span class="fundo-preto">
+                        1- Em uma panela, misture o leite condensado, o amido de milho e o leite.<br>
+                        2- Leve ao fogo baixo, mexendo sempre até engrossar.<br>
+                        3- Retire do fogo e deixe esfriar.<br>
+                        4- Misture o creme de leite ao creme já frio.<br>
+                        5- Em um recipiente, faça camadas alternadas de biscoitos champanhe, morangos fatiados e o
+                        creme.<br>
+                        6- Repita as camadas até terminar com o creme por cima.<br>
+                        7- Leve à geladeira por pelo menos 4 horas antes de servir.
+                    </span>
+                </div>
+            </li>
+            <li><a href="#" onclick="showRecipe('recipe3')"><span class="fundo-preto">PUDIM DE LEITE
+                        CONDENSADO</span></a>
+                <div id="recipe3" class="recipe-content">
+
+                    <h2><span class="fundo-preto">Pudim de Leite Condensado</span></h2>
+                    <img src="images/pudim_resized.jpg">
+
+                    <h2><span class="fundo-preto">Ingredientes(08 porções)</span></h2>
+                    <span class="fundo-branco">
+                        1 lata de leite condensado<br>
+                        A mesma medida de leite<br>
+                        3 ovos<br>
+                        1 colher de chá de essência de baunilha (opcional)<br>
+                        1 xícara de açúcar para a calda
+                    </span>
+
+                    <h2><span class="fundo-preto">Modo de Preparo</span></h2>
+                    <span class="fundo-branco">
+                        1- Preaqueça o forno a 180°C.<br>
+                        2- Em uma forma de pudim, derreta o açúcar em fogo médio até obter uma calda dourada. <br>
+                        3- Gire a forma para cobrir o fundo e as laterais.<br>
+                        4- No liquidificador, bata o leite condensado, o leite, os ovos e a essência de baunilha até
+                        obter
+                        uma mistura homogênea.<br>
+                        5- Despeje a mistura na forma caramelizada.<br>
+                        6- Cubra a forma com papel alumínio.<br>
+                        7- Asse em banho-maria no forno preaquecido por aproximadamente 1 hora.<br>
+                        8- Deixe esfriar completamente e leve à geladeira antes de desenformar.
+                    </span>
+
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <script>
+        function showRecipe(recipe) {
+            // Verifica se a receita já está sendo exibida
+            var recipeElement = document.getElementById(recipe);
+            if (recipeElement.style.display === 'block') {
+                // Oculta a receita
+                recipeElement.style.display = 'none';
+            } else {
+                // Oculta todas as receitas
+                var recipes = document.getElementsByClassName('recipe-content');
+                for (var i = 0; i < recipes.length; i++) {
+                    recipes[i].style.display = 'none';
+                }
+
+                // Exibe a receita selecionada
+                recipeElement.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

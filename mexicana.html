@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEXICANA</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+        * {
+            font-family: 'Nunito', sans-serif;
+            font-size: 18px;
+
+        }
+
+        body {
+            background-image: url(images/cozinhadefundo.jpg);
+            background-size: 100% 100%;
+            background-position: center;
+            background-attachment: fixed;
+
+
+            color: yellow;
+
+        }
+        .titulo{
+            
+            color: var(--firstcolor);
+            background-color: black;
+            display: inline-block;
+            text-align: center;
+            margin-left: 43.8%;
+            
+        }
+        .navbar a {
+            text-decoration: none;
+            margin-left: 70rem;
+            padding: 0.5rem;
+            color: var(--firstcolor);
+            background-color: black;
+        }
+
+        #sidebar a {
+            color: yellow;
+
+        }
+
+        .recipe-content {
+            text-align: center;
+            align-items: center;
+            max-width: 200%;
+            color: white;
+        }
+
+        h2 {
+            font-size: 23px;
+            color: yellow;
+
+        }
+
+        .tomate {
+            color: yellow;
+            font-size: 20;
+
+        }
+
+        .fundo-branco {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+        }
+
+        .fundo-preto {
+            background-color: black;
+        }
+    </style>
+
+</head>
+<header>
+    <nav class="navbar">
+        <a href="restaurante.html">Voltar</a>
+    </nav>
+    <nav class="titulo">
+        <h1>RECEITAS MEXICANAS</h1>
+    </nav>
+<body>
+    <div id="sidebar">
+        <ul>
+            <li><a href="#" onclick="showRecipe('recipe1')"><span class="fundo-preto">TACOS DE CARNE ASSADA</span></a>
+                <div id="recipe1" class="recipe-content">
+
+                    <h2><span class="fundo-preto">Tacos de Carne Assada</span></h2>
+                    <img src="images/tacosdecarneassada_resized.jpg">
+
+                    <h2><span class="fundo-preto">Ingredientes(04 porções)</span></h2>
+                    <span class="fundo-branco">
+                        500g de carne asada (pode ser bife ou contrafilé)<br>
+                        8 tortilhas de milho ou trigo<br>
+                        1 cebola roxa, cortada em fatias finas<br>
+                        1 tomate, picado<br>
+                        Coentro fresco picado<br>
+                        1 abacate maduro, fatiado<br>
+                        Suco de 2 limões<br>
+                        Sal e pimenta a gosto<br>
+                        Molho de pimenta a gosto (opcional)</span>
+
+                    <h2><span class="fundo-preto">Modo de Preparo</span></h2>
+                    <span class="fundo-branco">
+                        1- Tempere a carne com sal, pimenta e o suco de limão.<br>
+                        2- Deixe marinar por pelo menos 30 minutos.<br>
+                        3- Grelhe a carne em uma churrasqueira ou frigideira quente até que esteja ao seu gosto<br>
+                        (geralmente, carne asada é servida levemente rosada no centro).<br>
+                        4- Deixe a carne descansar por alguns minutos e, em seguida, corte-a em tiras finas.<br>
+                        5- Aqueça as tortilhas em uma frigideira quente até que fiquem levemente douradas.<br>
+                        6- Monte os tacos, colocando a carne asada grelhada nas tortilhas, seguida de cebola, tomate,
+                        abacate e coentro fresco.<br>
+                        7- Sirva com molho de pimenta, se desejar.</span>
+                </div>
+            </li>
+            <li><a href="#" onclick="showRecipe('recipe2')"><span class="fundo-preto">GUACAMOLE</span></a>
+                <div id="recipe2" class="recipe-content">
+
+                    <h2><span class="fundo-preto">Guacamole</span></h2>
+                    <img src="images/Guacamole_resized.jpg">
+
+                    <h2><span class="fundo-preto">Ingredientes(04 porções)</span></h2>
+                    <span class="fundo-branco">
+                        3 abacates maduros<br>
+                        1 cebola roxa, picada<br>
+                        1 tomate, picado<br>
+                        2 dentes de alho, picados<br>
+                        Suco de 1 limão<br>
+                        Coentro fresco picado a gosto<br>
+                        Sal e pimenta a gosto<br>
+                        Pimenta jalapeño picada (opcional, para um toque de picante)</span>
+
+                    <h2><span class="fundo-preto">Modo de Preparo</span></h2>
+                    <span class="fundo-branco">
+                        1- Descasque e amasse os abacates em uma tigela.<br>
+                        2- Adicione a cebola, o tomate, o alho, o suco de limão e o coentro à tigela e misture bem.<br>
+                        3- Tempere com sal e pimenta a gosto.<br>
+                        4- Se desejar um toque picante, adicione pimenta jalapeño picada a gosto.<br>
+                        5- Sirva o guacamole com tortilhas de milho ou como acompanhamento para tacos e outros pratos
+                        mexicanos.</span>
+
+                </div>
+            </li>
+            <li><a href="#" onclick="showRecipe('recipe3')"><span class="fundo-preto">BURRITOS</span></a>
+                <div id="recipe3" class="recipe-content">
+                    <h2><span class="fundo-preto">Burritos</span></h2>
+                    <img src="images/burrito_resized.jpg">
+
+                    <h2><span class="fundo-preto">Ingredientes(04 porções)</span></h2>
+                    <span class="fundo-branco">
+                        4 tortillas de trigo grandes<br>
+                        2 xícaras de arroz cozido<br>
+                        1 lata de feijão-preto (ou feijão de sua escolha), escorrido e lavado<br>
+                        2 xícaras de carne moída cozida e temperada com taco (opcional)<br>
+                        1 xícara de queijo ralado (cheddar, monterey jack ou mistura de queijos mexicanos)<br>
+                        1 xícara de alface picada<br>
+                        1 xícara de tomate picado<br>
+                        1/2 xícara de cebola picada<br>
+                        1/2 xícara de pimentão picado (opcional)<br>
+                        1/2 xícara de creme de leite ou sour cream<br>
+                        1/2 xícara de guacamole (opcional)<br>
+                        Salsa de sua escolha (opcional)<br>
+                        Pimenta jalapeño fatiada (opcional)<br>
+                        Sal e pimenta a gosto</span>
+
+                    <h2><span class="fundo-preto">Modo de Preparo</span></h2>
+                    <span class="fundo-branco">
+                        1- Aqueça as tortillas: Você pode aquecer as tortillas no micro-ondas por cerca de 30
+                        segundos,<br> ou na frigideira por alguns segundos de cada lado até ficarem levemente
+                        douradas.<br>
+                        2- Montagem dos burritos: Coloque uma tortilla em uma superfície plana e adicione uma porção de
+                        arroz cozido no centro.<br>
+                        3- Em seguida, adicione feijão, carne (se estiver usando), queijo, alface, tomate, cebola,
+                        pimentão (se estiver usando)<br> e qualquer outro acompanhamento desejado, como guacamole, sour
+                        cream, salsa ou jalapeños.<br>
+                        4- Tempere com sal e pimenta a gosto.<br>
+                        5- Dobre o burrito: Dobre os lados da tortilla sobre o recheio e, em seguida, dobre<br> a parte
+                        inferior para cima e enrole o burrito de baixo para cima, mantendo o recheio firme.<br>
+                        6- Sirva imediatamente: Você pode servir os burritos mexicanos imediatamente.<br>
+                        7- Eles também podem ser levemente grelhados em uma frigideira com um pouco de óleo para dar um
+                        toque crocante por fora.<br>
+                        8- Acompanhamentos adicionais: Sirva com salsa adicional, guacamole e creme de leite no lado, se
+                        desejar.</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function showRecipe(recipe) {
+            // Verifica se a receita já está sendo exibida
+            var recipeElement = document.getElementById(recipe);
+            if (recipeElement.style.display === 'block') {
+                // Oculta a receita
+                recipeElement.style.display = 'none';
+            } else {
+                // Oculta todas as receitas
+                var recipes = document.getElementsByClassName('recipe-content');
+                for (var i = 0; i < recipes.length; i++) {
+                    recipes[i].style.display = 'none';
+                }
+
+                // Exibe a receita selecionada
+                recipeElement.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRUTOS DO MAR</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+        * {
+            font-family: 'Nunito', sans-serif;
+            font-size: 18px;
+
+        }
+
+        body {
+            background-image: url(images/cozinhadefundo.jpg);
+            background-size: 100% 100%;
+            background-position: center;
+            background-attachment: fixed;
+            color: yellow;
+
+        }
+        .titulo{
+            
+            color: var(--firstcolor);
+            background-color: black;
+            display: inline-block;
+            text-align: center;
+            margin-left: 41.2%;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            margin-left: 70rem;
+            padding: 0.5rem;
+            color: var(--firstcolor);
+            background-color: black;
+        }
+
+        #sidebar a {
+            color: yellow;
+
+        }
+
+        .recipe-content {
+            text-align: center;
+            align-items: center;
+            max-width: 200%;
+            color: white;
+        }
+
+        h2 {
+            font-size: 23px;
+            color: yellow;
+
+        }
+
+        .tomate {
+            color: yellow;
+            font-size: 20;
+
+        }
+
+        .fundo-branco {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+        }
+
+        .fundo-preto {
+            background-color: black;
+        }
+    </style>
+
+</head>
+<header>
+    <nav class="navbar">
+        <a href="restaurante.html">Voltar</a>
+    </nav>
+    <nav class="titulo">
+        <h1>RECEITAS DE FRUTOS DO MAR</h1>
+    </nav>
+<body>
+    <div id="sidebar">
+        <ul>
+            <li><a href="#" onclick="showRecipe('recipe1')"><span class="fundo-preto">CAMARÃO AO ALHO E LIMÃO</span></a>
+                <div id="recipe1" class="recipe-content">
+
+                    <h2><span class="fundo-preto">Camarão ao Alho e Limão</span></h2>
+                    <img src="images/camaraonoalho_resized.jpg">
+
+                    <h2><span class="fundo-preto">Ingredientes(03 porções)</span></h2>
+                    <span class="fundo-branco"> 
+                        500g de camarões grandes, descascados e limpos<br>
+                        4 dentes de alho, picados<br>
+                        Suco de 2 limões<br>
+                        2 colheres de sopa de azeite de oliva<br>
+                        Sal e pimenta a gosto<br>
+                        Salsinha fresca picada para decorar</span>
+
+                    <h2><span class="fundo-preto">Modo de Preparo</span></h2>
+                    <span class="fundo-branco"> 
+                        1- Tempere os camarões com o suco de limão, alho picado, sal e pimenta.<br>
+                        2- Deixe marinar por pelo menos 15 minutos.<br>
+                        3- Em uma frigideira grande, aqueça o azeite de oliva em fogo médio-alto.<br>
+                        4- Adicione os camarões à frigideira e cozinhe por cerca de 2-3 minutos de cada lado, até que fiquem rosados e cozidos por completo.<br>
+                        5- Sirva quente, regado com o molho de limão e alho, e decore com salsinha picada.</span>
+                </div>
+            </li>
+            <li><a href="#" onclick="showRecipe('recipe2')"><span class="fundo-preto">PAELLA DE FRUTOS DO MAR</span></a>
+                <div id="recipe2" class="recipe-content">
+
+                    <h2><span class="fundo-preto">Paella de Frutos do Mar</span></h2>
+                    <img src="images/paella-com-frutos-do-mar_resized.jpg">
+
+                    <h2><span class="fundo-preto">Ingredientes(05 porções)</span></h2>
+                    <span class="fundo-branco"> 
+                        1 xícara de arroz para paella<br>
+                        500g de mistura de frutos do mar (camarões, lulas, mexilhões, etc.)<br>
+                        1 cebola, picada<br>
+                        2 dentes de alho, picados<br>
+                        1 pimentão vermelho, cortado em tiras<br>
+                        1 colher de chá de açafrão em pó<br>
+                        1 colher de chá de páprica<br>
+                        2 xícaras de caldo de peixe<br>
+                        1/2 xícara de ervilhas<br>
+                        Sal e pimenta a gosto<br>
+                        Azeite de oliva para cozinhar</span>
+
+                    <h2><span class="fundo-preto">Modo de Preparo</span></h2>
+                    <span class="fundo-branco"> 
+                        1- Em uma paellera (ou frigideira grande e rasa), aqueça o azeite de oliva em fogo médio.<br>
+                        2- Adicione a cebola e o alho, e refogue até que fiquem macios.<br>
+                        3- Adicione o pimentão vermelho e continue refogando por mais alguns minutos.<br>
+                        4- Adicione o arroz, o açafrão e a páprica à paellera. <br>
+                        5- Misture bem para que o arroz fique bem revestido com os temperos.<br>
+                        6- Despeje o caldo de peixe na paellera e mexa. <br>
+                        7- Cozinhe por cerca de 15-20 minutos, mexendo ocasionalmente, até que o arroz esteja quase cozido.<br>
+                        8-Adicione os frutos do mar e as ervilhas ao arroz e cozinhe por mais 5-10 minutos,<br> ou até que os frutos do mar estejam cozidos e o arroz esteja macio.<br>
+                        9- Tempere com sal e pimenta a gosto.<br>
+                        10- Sirva quente diretamente da paellera.</span>
+                </div>
+            </li>
+            <li><a href="#" onclick="showRecipe('recipe3')"><span class="fundo-preto">RISOTO DE FRUTOS DO MAR</span></a>
+                <div id="recipe3" class="recipe-content">
+
+                    <h2><span class="fundo-preto">Risoto de Frutos do Mar</span></h2>
+                    <img src="images/risotofrutosdomar_resized.jpg">
+
+                    <h2><span class="fundo-preto">Ingredientes(04 porções)</span></h2>
+                    <span class="fundo-branco"> 
+                        1 xícara de arroz arbóreo (próprio para risoto)<br>
+                        500g de frutos do mar (mistura de camarões, mexilhões, lulas, etc.)<br>
+                        1 cebola média, picada<br>
+                        2 dentes de alho, picados<br>
+                        2 colheres de sopa de azeite de oliva<br>
+                        1/2 xícara de vinho branco seco<br>
+                        4 xícaras de caldo de peixe ou caldo de legumes (mantidos aquecidos)<br>
+                        1/2 xícara de tomate pelado picado<br>
+                        1/4 de xícara de creme de leite vegano (opcional)<br>
+                        Suco de 1 limão<br>
+                        Sal e pimenta a gosto<br>
+                        Salsa fresca picada para decorar</span>
+
+                    <h2><span class="fundo-preto">Modo de Preparo</span></h2>
+                    <span class="fundo-branco"> 
+                        1- Em uma panela grande, aqueça o azeite de oliva em fogo médio.<br> 
+                        2- Adicione a cebola picada e o alho picado, e refogue até que fiquem macios e dourados.<br>
+                        3- Acrescente o arroz arbóreo à panela e mexa bem para que fique envolvido no azeite e fique ligeiramente translúcido.<br>
+                        4- Despeje o vinho branco na panela e mexa até que o arroz absorva a maior parte do líquido.<br>
+                        5- Adicione o tomate pelado picado e continue mexendo.<br>
+                        6- Comece a adicionar o caldo de peixe ou caldo de legumes, uma concha de cada vez, mexendo constantemente.<br>
+                        7- À medida que o líquido é absorvido, adicione mais caldo.<br>
+                        8- Continue esse processo até o arroz ficar cremoso e al dente (isso deve levar cerca de 18-20 minutos).<br>
+                        9- Enquanto o risoto cozinha, aqueça uma frigideira separada em fogo médio-alto<br> e cozinhe os frutos do mar por cerca de 2-3 minutos até que estejam cozidos.<br> 
+                        10- Tempere com sal, pimenta e suco de limão.<br>
+                        11- Quando o risoto estiver pronto, misture os frutos do mar cozidos e o creme de leite vegano (se estiver usando) ao risoto.<br> 
+                        12- Misture bem e cozinhe por mais 2-3 minutos.<br>
+                        13- Sirva quente, decorado com salsa fresca picada.</span>
+                        
+                        
+                       
+
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function showRecipe(recipe) {
+            // Verifica se a receita já está sendo exibida
+            var recipeElement = document.getElementById(recipe);
+            if (recipeElement.style.display === 'block') {
+                // Oculta a receita
+                recipeElement.style.display = 'none';
+            } else {
+                // Oculta todas as receitas
+                var recipes = document.getElementsByClassName('recipe-content');
+                for (var i = 0; i < recipes.length; i++) {
+                    recipes[i].style.display = 'none';
+                }
+
+                // Exibe a receita selecionada
+                recipeElement.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

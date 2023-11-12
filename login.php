@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-image: url(/images/comida-saludable.jpg);
+            background-image: url(images/comida-saludable.jpg);
             background-size: cover;
         }
 

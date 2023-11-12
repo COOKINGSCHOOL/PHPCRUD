@@ -2,9 +2,9 @@
 $dbHost = 'Localhost';
 $dbUsername = 'root';
 $dbPassword = '';
-$dbName = 'formulario-amt';
+$dbName = 'formulario2-amt';
 
-$conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+$conexaoreceita = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
     //if($conexao->connect_errno)
     //{
@@ -14,4 +14,4 @@ $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
     //{
     //    echo "Conexão efetuada com sucesso";
     // }
-?>
+    ?>

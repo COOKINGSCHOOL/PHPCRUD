@@ -6,14 +6,14 @@ if (isset($_POST['submit'])) {
     //print_r('<br>');
     //print_r($_POST['mdpreparo']);
     //print_r('<br>');
-   
+
 
     include_once('config2.php');
 
     $nome = $_POST['nome'];
     $ingredientes = $_POST['ingredientes'];
     $mdpreparo = $_POST['mdpreparo'];
-    
+
 
 
     $result = mysqli_query($conexaoreceita, "INSERT INTO receitas(nome,ingredientes,mdpreparo) VALUES ('$nome','$ingredientes','$mdpreparo')");
@@ -48,7 +48,8 @@ if (isset($_POST['submit'])) {
             background-color: rgba(0, 0, 0, 0.9);
             padding: 15px;
             border-radius: 15px;
-            width: 25%;
+            width: 60%;
+            margin: auto;
 
         }
 
@@ -78,6 +79,32 @@ if (isset($_POST['submit'])) {
             font-size: 15px;
             width: 100%;
             letter-spacing: 2px;
+
+        }
+
+        .inputUser1 {
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+            height: 100px;
+
+        }
+
+        .inputUser2 {
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+            height: 200px;
         }
 
         .labelInput {
@@ -89,11 +116,17 @@ if (isset($_POST['submit'])) {
         }
 
         .inputUser:focus~.labelInput,
-        .inputUser:valid~.labelInput {
+        .inputUser:valid~.labelInput,
+        .inputUser1:focus~.labelInput,
+        .inputUser1:valid~.labelInput,
+        .inputUser2:focus~.labelInput,
+        .inputUser2:valid~.labelInput {
             top: -20px;
             font-size: 12px;
             color: dodgerblue;
         }
+
+        
 
         #submit {
             background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(79, 14, 201));
@@ -122,7 +155,7 @@ if (isset($_POST['submit'])) {
     <div class="box">
         <form action="formulariodereceita.php" method="POST">
             <fieldset>
-                <legend><b>RECEITAS</b></legend>
+                <legend><b>ESCREVA AQUI SUA RECEITA</b></legend>
                 <br>
                 <div class="inputBox">
                     <input type="text" name="nome" id="nome" class="inputUser" required>
@@ -130,16 +163,16 @@ if (isset($_POST['submit'])) {
                 </div>
                 <br></br>
                 <div class="inputBox">
-                    <input type="text" name="ingredientes" id="ingredientes" class="inputUser" required>
+                    <textarea name="ingredientes" id="ingredientes" class="inputUser1" required></textarea>
                     <label for="ingredientes" class="labelInput">Ingredientes</label>
                 </div>
                 <br></br>
                 <div class="inputBox">
-                    <input type="text" name="mdpreparo" id="mdpreparo" class="inputUser" required>
+                    <textarea name="mdpreparo" id="mdpreparo" class="inputUser2" required></textarea>
                     <label for="mdpreparo" class="labelInput">Modo de Preparo</label>
                 </div>
                 <br></br>
-                
+
                 <input type="submit" name="submit" id="submit">
             </fieldset>
         </form>

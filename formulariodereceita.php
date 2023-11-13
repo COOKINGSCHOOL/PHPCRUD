@@ -11,14 +11,15 @@ if (isset($_POST['submit'])) {
     include_once('config2.php');
 
     $nome = $_POST['nome'];
+    $categoria = $_POST['categoria'];
     $ingredientes = $_POST['ingredientes'];
     $mdpreparo = $_POST['mdpreparo'];
 
 
 
-    $result = mysqli_query($conexaoreceita, "INSERT INTO receitas(nome,ingredientes,mdpreparo) VALUES ('$nome','$ingredientes','$mdpreparo')");
+    $result = mysqli_query($conexaoreceita, "INSERT INTO receitas(nome,categoria,ingredientes,mdpreparo) VALUES ('$nome','$categoria','$ingredientes','$mdpreparo')");
 
-    header('Location: restaurante.html');
+    header('Location: bancodereceita.php');
 }
 
 ?>
@@ -126,7 +127,7 @@ if (isset($_POST['submit'])) {
             color: dodgerblue;
         }
 
-        
+
 
         #submit {
             background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(79, 14, 201));
@@ -147,6 +148,15 @@ if (isset($_POST['submit'])) {
             border-radius: 10px;
             padding: 10px;
         }
+        
+
+    option[disabled] {
+        color: black;
+    }
+    option[value]{
+        color: black;
+    }
+        
     </style>
 </head>
 
@@ -162,6 +172,20 @@ if (isset($_POST['submit'])) {
                     <label for="nome" class="labelInput">Nome da Receita</label>
                 </div>
                 <br></br>
+                <div class="inputBox1">
+                    <select name="categoria" id="categoria" class="inputUser" required>
+                        <option value="" disabled selected>Selecione a categoria</option>
+                        <option value="Massas">Massas</option>
+                        <option value="Oriental">Oriental</option>
+                        <option value="Vegana">Vegana</option>
+                        <option value="Frutos-do-mar">Frutos do Mar</option>
+                        <option value="Mexicana">Mexicana</option>
+                        <option value="Sobremesas">Sobremesas</option>
+                        
+
+                    </select>
+                </div>
+                <br>
                 <div class="inputBox">
                     <textarea name="ingredientes" id="ingredientes" class="inputUser1" required></textarea>
                     <label for="ingredientes" class="labelInput">Ingredientes</label>

@@ -2,6 +2,8 @@
 if (isset($_POST['submit'])) {
     //print_r($_POST['nome']);
     //print_r('<br>');
+    //print_r($_POST['categoria']);
+    //print_r('<br>');
     //print_r($_POST['ingredientes']);
     //print_r('<br>');
     //print_r($_POST['mdpreparo']);
@@ -15,9 +17,10 @@ if (isset($_POST['submit'])) {
     $ingredientes = $_POST['ingredientes'];
     $mdpreparo = $_POST['mdpreparo'];
 
-
-
-    $result = mysqli_query($conexaoreceita, "INSERT INTO receitas(nome,categoria,ingredientes,mdpreparo) VALUES ('$nome','$categoria','$ingredientes','$mdpreparo')");
+    $imagem_tmp = $_FILES['imagem']['tmp_name'];
+    $imagem_binario = file_get_contents($imagem_tmp);
+    $imagem_binario_sql = mysqli_real_escape_string($conexaoreceita, $imagem_binario);
+    $result = mysqli_query($conexaoreceita, "INSERT INTO receitas(nome, categoria, ingredientes, mdpreparo, imagem) VALUES ('$nome', '$categoria', '$ingredientes', '$mdpreparo', '$imagem_binario_sql')");
 
     header('Location: bancodereceita.php');
 }
@@ -129,6 +132,9 @@ if (isset($_POST['submit'])) {
 
 
 
+
+
+
         #submit {
             background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(79, 14, 201));
             width: 100%;
@@ -148,28 +154,35 @@ if (isset($_POST['submit'])) {
             border-radius: 10px;
             padding: 10px;
         }
-        
 
-    option[disabled] {
-        color: black;
-    }
-    option[value]{
-        color: black;
-    }
-        
+
+        option[disabled] {
+            color: black;
+        }
+
+        option[value] {
+            color: black;
+        }
     </style>
 </head>
 
 <body>
     <a href="restaurante.html">Voltar</a>
     <div class="box">
-        <form action="formulariodereceita.php" method="POST">
+    <form action="formulariodereceita.php" method="POST" enctype="multipart/form-data">
             <fieldset>
                 <legend><b>ESCREVA AQUI SUA RECEITA</b></legend>
                 <br>
                 <div class="inputBox">
                     <input type="text" name="nome" id="nome" class="inputUser" required>
                     <label for="nome" class="labelInput">Nome da Receita</label>
+                </div>
+                <br></br>
+                <div class="inputBox2">
+                    
+                    <p>Escolha uma imagem:</p>
+                    <input type="file" name="imagem" id="imagem" accept="image/*" onchange="exibirImagem(this)">
+                    <img style="max-width: 100%; max-height: 200px; margin-top: 10px;">
                 </div>
                 <br></br>
                 <div class="inputBox1">
@@ -181,7 +194,7 @@ if (isset($_POST['submit'])) {
                         <option value="Frutos-do-mar">Frutos do Mar</option>
                         <option value="Mexicana">Mexicana</option>
                         <option value="Sobremesas">Sobremesas</option>
-                        
+
 
                     </select>
                 </div>

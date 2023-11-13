@@ -83,7 +83,7 @@ $result = $conexaoreceita->query($sql);
 </head>
 
 <body>
-    <a href="restaurante.html">Voltar</a>
+    <a href="formulariodereceita.php">Voltar</a>
     <h1>Receitas dos Alunos</h1>
 
     <table>
@@ -104,6 +104,7 @@ $result = $conexaoreceita->query($sql);
                 echo "<td>". $row["categoria"] . "</td>";
                 echo "<td>" . $row['ingredientes'] . "</td>";
                 echo "<td>" . $row['mdpreparo'] . "</td>";
+                echo "<td></td>";
                 echo "</tr>";
             }
             ?>

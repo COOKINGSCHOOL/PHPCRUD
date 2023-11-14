@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
     $imagem_tmp = $_FILES['imagem']['tmp_name'];
     $imagem_binario = file_get_contents($imagem_tmp);
     $imagem_binario_sql = mysqli_real_escape_string($conexaoreceita, $imagem_binario);
-    $result = mysqli_query($conexaoreceita, "INSERT INTO receitas(nome, categoria, ingredientes, mdpreparo, imagem) VALUES ('$nome', '$categoria', '$ingredientes', '$mdpreparo', '$imagem_binario_sql')");
+    $result = mysqli_query($conexaoreceita, "INSERT INTO receita(nome, categoria, ingredientes, mdpreparo, imagem) VALUES ('$nome', '$categoria', '$ingredientes', '$mdpreparo', '$imagem_binario_sql')");
 
     header('Location: bancodereceita.php');
 }

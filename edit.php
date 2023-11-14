@@ -1,19 +1,30 @@
 <?php
-if (isset($_POST['submit'])) {
+if(!empty($_GET['receitas'])) 
+{
 
     include_once('config2.php');
 
-    $nome = $_POST['nome'];
-    $categoria = $_POST['categoria'];
-    $ingredientes = $_POST['ingredientes'];
-    $mdpreparo = $_POST['mdpreparo'];
+    $id = $_GET['receitas'];
 
-    $imagem_tmp = $_FILES['imagem']['tmp_name'];
-    $imagem_binario = file_get_contents($imagem_tmp);
-    $imagem_binario_sql = mysqli_real_escape_string($conexaoreceita, $imagem_binario);
-    $result = mysqli_query($conexaoreceita, "INSERT INTO receitas(nome, categoria, ingredientes, mdpreparo, imagem) VALUES ('$nome', '$categoria', '$ingredientes', '$mdpreparo', '$imagem_binario_sql')");
+    $sqlSelect = "SELECT * FROM receita WHERE receitas=$id";
 
-    header('Location: bancodereceita.php');
+    $result = $conexaoreceita->query($sqlSelect);
+
+    if($result->num_rows > 0)
+    {
+        while($row = mysql_fetch_assoc($result)) 
+        {
+            $nome = $row['nome'];
+            $categoria = $row['categoria'];
+            $ingredientes = $row['ingredientes'];
+            $mdpreparo = $row['mdpreparo'];
+        }
+        print_r($nome);
+    }
+    else
+    {
+        header('Location: bancodereceita.php');
+    }
 }
 
 ?>
@@ -155,14 +166,14 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <a href="restaurante.html">Voltar</a>
+    <a href="bancodereceita.php">Voltar</a>
     <div class="box">
         <form action="formulariodereceita.php" method="POST" enctype="multipart/form-data">
             <fieldset>
-                <legend><b>ESCREVA AQUI SUA RECEITA</b></legend>
+                <legend><b>EDITAR RECEITA</b></legend>
                 <br>
                 <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <input type="text" name="nome" id="nome" class="inputUser" value="<?php echo $nome ?>" required>
                     <label for="nome" class="labelInput">Nome da Receita</label>
                 </div>
                 <br></br>

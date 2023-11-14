@@ -96,7 +96,7 @@ if (isset($_POST['submit'])) {
             width: 100%;
             letter-spacing: 2px;
             height: 100px;
-
+            /* Ajuste a altura conforme necessário */
         }
 
         .inputUser2 {
@@ -108,7 +108,8 @@ if (isset($_POST['submit'])) {
             font-size: 15px;
             width: 100%;
             letter-spacing: 2px;
-            height: 200px;
+            height: 100px;
+            /* Ajuste a altura conforme necessário */
         }
 
         .labelInput {
@@ -129,10 +130,6 @@ if (isset($_POST['submit'])) {
             font-size: 12px;
             color: dodgerblue;
         }
-
-
-
-
 
 
         #submit {
@@ -169,7 +166,7 @@ if (isset($_POST['submit'])) {
 <body>
     <a href="restaurante.html">Voltar</a>
     <div class="box">
-    <form action="formulariodereceita.php" method="POST" enctype="multipart/form-data">
+        <form action="formulariodereceita.php" method="POST" enctype="multipart/form-data">
             <fieldset>
                 <legend><b>ESCREVA AQUI SUA RECEITA</b></legend>
                 <br>
@@ -179,7 +176,7 @@ if (isset($_POST['submit'])) {
                 </div>
                 <br></br>
                 <div class="inputBox2">
-                    
+
                     <p>Escolha uma imagem:</p>
                     <input type="file" name="imagem" id="imagem" accept="image/*" onchange="exibirImagem(this)">
                     <img style="max-width: 100%; max-height: 200px; margin-top: 10px;">

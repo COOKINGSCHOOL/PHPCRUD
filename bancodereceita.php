@@ -93,6 +93,7 @@ $result = $conexaoreceita->query($sql);
                 <th>Categoria</th>
                 <th>Ingredientes</th>
                 <th>Modo de Preparo</th>
+                <th>Imagem da Receita</th>
                 
             </tr>
         </thead>
@@ -104,7 +105,9 @@ $result = $conexaoreceita->query($sql);
                 echo "<td>". $row["categoria"] . "</td>";
                 echo "<td>" . $row['ingredientes'] . "</td>";
                 echo "<td>" . $row['mdpreparo'] . "</td>";
-                echo "<td></td>";
+                echo "<td><img src='data:image/jpeg;base64," . base64_encode($row['imagem']) . "' alt='Imagem Receita' style='max-width: 100px; max-height: 100px;'></td>";
+
+
                 echo "</tr>";
             }
             ?>

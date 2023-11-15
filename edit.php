@@ -21,6 +21,7 @@
      {
          header('Location: bancodereceita.php');
      } 
+
 }
 
 ?>

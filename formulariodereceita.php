@@ -1,6 +1,16 @@
 <?php
+session_start(); // Inicie a sessão se ainda não foi iniciada
+
+// Verifique se o usuário está logado
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php'); // Redirecione para a página de login se não estiver logado
+    exit();
+}
+
 if (isset($_POST['submit'])) {
     include_once('config2.php');
+
+    $user_id = $_SESSION['user_id']; // Obtém o user_id da sessão
 
     $nome = $_POST['nome'];
     $categoria = $_POST['categoria'];
@@ -12,10 +22,10 @@ if (isset($_POST['submit'])) {
         $imagem_tmp = $_FILES['imagem']['tmp_name'];
         $imagem_binario = file_get_contents($imagem_tmp);
         $imagem_binario_sql = mysqli_real_escape_string($conexaoreceita, $imagem_binario);
-        $result = mysqli_query($conexaoreceita, "INSERT INTO receita(nome, categoria, ingredientes, mdpreparo, imagem) VALUES ('$nome', '$categoria', '$ingredientes', '$mdpreparo', '$imagem_binario_sql')");
+        $result = mysqli_query($conexaoreceita, "INSERT INTO receita(nome, categoria, ingredientes, mdpreparo, imagem, user_id) VALUES ('$nome', '$categoria', '$ingredientes', '$mdpreparo', '$imagem_binario_sql', $user_id)");
     } else {
         // Se não houver imagem, insira apenas os outros campos
-        $result = mysqli_query($conexaoreceita, "INSERT INTO receita(nome, categoria, ingredientes, mdpreparo) VALUES ('$nome', '$categoria', '$ingredientes', '$mdpreparo')");
+        $result = mysqli_query($conexaoreceita, "INSERT INTO receita(nome, categoria, ingredientes, mdpreparo, user_id) VALUES ('$nome', '$categoria', '$ingredientes', '$mdpreparo', $user_id)");
     }
 
     header('Location: bancodereceita.php');

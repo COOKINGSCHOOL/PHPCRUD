@@ -1,10 +1,15 @@
 <?php
 include_once('config2.php');
 
-if (!empty($_GET['id'])) {
+session_start();
 
+if (!empty($_GET['id'])) {
     $id = $_GET['id'];
-    $sqlSelect = "SELECT * FROM receita WHERE id=$id";
+
+    // Obtém o user_id da sessão
+    $user_id_session = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
+
+    $sqlSelect = "SELECT * FROM receita WHERE id=$id AND user_id=$user_id_session";
     $result = $conexaoreceita->query($sqlSelect);
 
     if ($result->num_rows > 0) {
@@ -16,11 +21,15 @@ if (!empty($_GET['id'])) {
         }
     } else {
         header('Location: bancodereceita.php');
+        exit(); // Certifique-se de encerrar o script após o redirecionamento
     }
 } else {
     header('Location: bancodereceita.php');
+    exit(); // Certifique-se de encerrar o script após o redirecionamento
 }
 ?>
+<!-- Restante do seu código HTML -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -166,7 +175,7 @@ if (!empty($_GET['id'])) {
                 <legend><b>EDITAR RECEITA</b></legend>
                 <br>
                 <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputUser" value=<?php echo $nome; ?> required>
+                    <input type="text" name="nome" id="nome" class="inputUser" value="<?php echo $nome; ?>" required>
                     <label for="nome" class="labelInput">Nome da Receita</label>
                 </div>
                 <br></br>

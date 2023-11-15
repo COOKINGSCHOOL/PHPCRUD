@@ -118,9 +118,15 @@ $result = $conexaoreceita->query($sql);
                 echo "<td>". $user_data["categoria"] . "</td>";
                 echo "<td>" . $user_data['ingredientes'] . "</td>";
                 echo "<td>" . $user_data['mdpreparo'] . "</td>";
-                echo "<td><img src='data:image/jpeg;base64," . base64_encode($user_data['imagem']) . "' alt='Imagem Receita' style='max-width: 100px; max-height: 100px;'></td>";
-                echo "<td>";
+                
+                // Verifica se há uma imagem associada
+                if (!empty($user_data['imagem'])) {
+                    echo "<td><img src='data:image/jpeg;base64," . base64_encode($user_data['imagem']) . "' alt='Imagem Receita' style='max-width: 100px; max-height: 100px;'></td>";
+                } else {
+                    echo "<td></td>"; // Não exibe nada se não houver imagem
+                }
 
+                echo "<td>";
                 // Verifica se o usuário logado é o criador da receita
                 if ($user_data['user_id'] == $user_id_session) {
                     echo "<a class='btn btn-sm btn-primary' href='edit.php?id=$user_data[id]' title='Editar'>

@@ -1,15 +1,5 @@
 <?php
 if (isset($_POST['submit'])) {
-    //print_r($_POST['nome']);
-    //print_r('<br>');
-    //print_r($_POST['categoria']);
-    //print_r('<br>');
-    //print_r($_POST['ingredientes']);
-    //print_r('<br>');
-    //print_r($_POST['mdpreparo']);
-    //print_r('<br>');
-
-
     include_once('config2.php');
 
     $nome = $_POST['nome'];
@@ -17,14 +7,19 @@ if (isset($_POST['submit'])) {
     $ingredientes = $_POST['ingredientes'];
     $mdpreparo = $_POST['mdpreparo'];
 
-    $imagem_tmp = $_FILES['imagem']['tmp_name'];
-    $imagem_binario = file_get_contents($imagem_tmp);
-    $imagem_binario_sql = mysqli_real_escape_string($conexaoreceita, $imagem_binario);
-    $result = mysqli_query($conexaoreceita, "INSERT INTO receita(nome, categoria, ingredientes, mdpreparo, imagem) VALUES ('$nome', '$categoria', '$ingredientes', '$mdpreparo', '$imagem_binario_sql')");
+    // Verificar se um arquivo de imagem foi enviado
+    if (isset($_FILES['imagem']) && $_FILES['imagem']['size'] > 0) {
+        $imagem_tmp = $_FILES['imagem']['tmp_name'];
+        $imagem_binario = file_get_contents($imagem_tmp);
+        $imagem_binario_sql = mysqli_real_escape_string($conexaoreceita, $imagem_binario);
+        $result = mysqli_query($conexaoreceita, "INSERT INTO receita(nome, categoria, ingredientes, mdpreparo, imagem) VALUES ('$nome', '$categoria', '$ingredientes', '$mdpreparo', '$imagem_binario_sql')");
+    } else {
+        // Se não houver imagem, insira apenas os outros campos
+        $result = mysqli_query($conexaoreceita, "INSERT INTO receita(nome, categoria, ingredientes, mdpreparo) VALUES ('$nome', '$categoria', '$ingredientes', '$mdpreparo')");
+    }
 
     header('Location: bancodereceita.php');
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -178,8 +173,8 @@ if (isset($_POST['submit'])) {
                 <div class="inputBox2">
 
                     <p>Escolha uma imagem:</p>
-                    <input type="file" name="imagem" id="imagem" accept="image/*" onchange="exibirImagem(this)">
-                    <img style="max-width: 100%; max-height: 200px; margin-top: 10px;">
+                    <input type="file" name="imagem" id="imagem" accept="image/*">
+                    <img  style="max-width: 100%; max-height: 200px; margin-top: 10px;">
                 </div>
                 <br></br>
                 <div class="inputBox1">
@@ -213,4 +208,5 @@ if (isset($_POST['submit'])) {
     </div>
 </body>
 
+</script>
 </html>

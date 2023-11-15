@@ -1,29 +1,25 @@
 <?php
-    include_once('config2.php');
+include_once('config2.php');
 
-    if(!empty($_GET['receitas']))
-    {
-    $id = $_GET['receitas'];
-    $sqlSelect = "SELECT * FROM receita WHERE receitas=$id";
+if (!empty($_GET['id'])) {
+
+    $id = $_GET['id'];
+    $sqlSelect = "SELECT * FROM receita WHERE id=$id";
     $result = $conexaoreceita->query($sqlSelect);
 
-    if($result->num_rows > 0)
-    {
-        while ($user_data = mysqli_fetch_assoc($result))
-        {
+    if ($result->num_rows > 0) {
+        while ($user_data = mysqli_fetch_assoc($result)) {
             $nome = $user_data['nome'];
             $categoria = $user_data['categoria'];
             $ingredientes = $user_data['ingredientes'];
             $mdpreparo = $user_data['mdpreparo'];
         }
-     }   
-     else
-     {
-         header('Location: bancodereceita.php');
-     } 
-
+    } else {
+        header('Location: bancodereceita.php');
+    }
+} else {
+    header('Location: bancodereceita.php');
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -131,7 +127,7 @@
         }
 
 
-        #submit {
+        #update {
             background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(79, 14, 201));
             width: 100%;
             border: none;
@@ -170,46 +166,44 @@
                 <legend><b>EDITAR RECEITA</b></legend>
                 <br>
                 <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputUser" value="<?php echo $nome;?>" required>
+                    <input type="text" name="nome" id="nome" class="inputUser" value=<?php echo $nome; ?> required>
                     <label for="nome" class="labelInput">Nome da Receita</label>
                 </div>
                 <br></br>
                 <div class="inputBox2">
 
                     <p>Escolha uma imagem:</p>
-                    <input type="file" name="imagem" id="imagem" accept="image/*" onchange="exibirImagem(this)">
+                    <input type="file" name="imagem" id="imagem"  accept="image/*">
                     <img style="max-width: 100%; max-height: 200px; margin-top: 10px;">
+
                 </div>
                 <br></br>
                 <div class="inputBox1">
                     <select name="categoria" id="categoria" class="inputUser" required>
                         <option value="" disabled selected>Selecione a categoria</option>
-                        <option value="Massas">Massas</option>
-                        <option value="Oriental">Oriental</option>
-                        <option value="Vegana">Vegana</option>
-                        <option value="Frutos-do-mar">Frutos do Mar</option>
-                        <option value="Mexicana">Mexicana</option>
-                        <option value="Sobremesas">Sobremesas</option>
-
-
+                        <option value="massas" <?php echo (strtolower($categoria) == 'massas') ? 'selected' : ''; ?>>Massas</option>
+                        <option value="oriental" <?php echo (strtolower($categoria) == 'oriental') ? 'selected' : ''; ?>>Oriental</option>
+                        <option value="vegana" <?php echo (strtolower($categoria) == 'vegana') ? 'selected' : ''; ?>>Vegana</option>
+                        <option value="frutos-do-mar" <?php echo (strtolower($categoria) == 'frutos-do-mar') ? 'selected' : ''; ?>>Frutos do Mar</option>
+                        <option value="mexicana" <?php echo (strtolower($categoria) == 'mexicana') ? 'selected' : ''; ?>>Mexicana</option>
+                        <option value="sobremesas" <?php echo (strtolower($categoria) == 'sobremesas') ? 'selected' : ''; ?>>Sobremesas</option>
                     </select>
                 </div>
                 <br>
                 <div class="inputBox">
-                    <textarea name="ingredientes" id="ingredientes" class="inputUser1" required></textarea>
+                    <textarea name="ingredientes" id="ingredientes" class="inputUser1" required><?php echo $ingredientes; ?></textarea>
                     <label for="ingredientes" class="labelInput">Ingredientes</label>
                 </div>
                 <br></br>
                 <div class="inputBox">
-                    <textarea name="mdpreparo" id="mdpreparo" class="inputUser2" required></textarea>
+                    <textarea name="mdpreparo" id="mdpreparo" class="inputUser2" required><?php echo $mdpreparo; ?></textarea>
                     <label for="mdpreparo" class="labelInput">Modo de Preparo</label>
                 </div>
                 <br></br>
-
-                <input type="submit" name="submit" id="submit">
+                <input type="hidden" name="id" value=<?php echo $id;?>>
+                <input type="submit" name="update" id="update">
             </fieldset>
         </form>
     </div>
 </body>
-
 </html>

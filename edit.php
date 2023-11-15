@@ -1,3 +1,29 @@
+<?php
+    include_once('config2.php');
+
+    if(!empty($_GET['receitas']))
+    {
+    $id = $_GET['receitas'];
+    $sqlSelect = "SELECT * FROM receita WHERE receitas=$id";
+    $result = $conexaoreceita->query($sqlSelect);
+
+    if($result->num_rows > 0)
+    {
+        while ($user_data = mysqli_fetch_assoc($result))
+        {
+            $nome = $user_data['nome'];
+            $categoria = $user_data['categoria'];
+            $ingredientes = $user_data['ingredientes'];
+            $mdpreparo = $user_data['mdpreparo'];
+        }
+     }   
+     else
+     {
+         header('Location: bancodereceita.php');
+     } 
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -138,12 +164,12 @@
 <body>
     <a href="bancodereceita.php">Voltar</a>
     <div class="box">
-        <form action="edit.php" method="POST" enctype="multipart/form-data">
+        <form action="saveEdit.php" method="POST" enctype="multipart/form-data">
             <fieldset>
                 <legend><b>EDITAR RECEITA</b></legend>
                 <br>
                 <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputUser"  required>
+                    <input type="text" name="nome" id="nome" class="inputUser" value="<?php echo $nome;?>" required>
                     <label for="nome" class="labelInput">Nome da Receita</label>
                 </div>
                 <br></br>
@@ -169,7 +195,7 @@
                 </div>
                 <br>
                 <div class="inputBox">
-                    <textarea name="ingredientes" id="ingredientes" class="inputUser1"  required></textarea>
+                    <textarea name="ingredientes" id="ingredientes" class="inputUser1" required></textarea>
                     <label for="ingredientes" class="labelInput">Ingredientes</label>
                 </div>
                 <br></br>

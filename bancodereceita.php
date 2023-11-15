@@ -103,12 +103,12 @@ $result = $conexaoreceita->query($sql);
             <?php
             while ($row = mysqli_fetch_assoc($result)) {
                 echo "<tr>";
-                echo "<td>". $row["receitas"] ."</td>";
-                echo "<td>" . $row['nome'] . "</td>";
-                echo "<td>". $row["categoria"] . "</td>";
-                echo "<td>" . $row['ingredientes'] . "</td>";
-                echo "<td>" . $row['mdpreparo'] . "</td>";
-                echo "<td><img src='data:image/jpeg;base64," . base64_encode($row['imagem']) . "' alt='Imagem Receita' style='max-width: 100px; max-height: 100px;'></td>";
+                echo "<td>". $user_data["receitas"] ."</td>";
+                echo "<td>" . $user_data['nome'] . "</td>";
+                echo "<td>". $user_data["categoria"] . "</td>";
+                echo "<td>" . $user_data['ingredientes'] . "</td>";
+                echo "<td>" . $user_data['mdpreparo'] . "</td>";
+                echo "<td><img src='data:image/jpeg;base64," . base64_encode($user_data['imagem']) . "' alt='Imagem Receita' style='max-width: 100px; max-height: 100px;'></td>";
                 echo "<td>
                     <a class='btn btn-sm btn-primary' href='edit.php?id=$row[receitas]'>
                     <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil-fill' viewBox='0 0 16 16'>

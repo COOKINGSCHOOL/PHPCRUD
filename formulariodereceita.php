@@ -182,9 +182,10 @@ if (isset($_POST['submit'])) {
                 <br></br>
                 <div class="inputBox2">
 
-                    <p>Escolha uma imagem:</p>
-                    <input type="file" name="imagem" id="imagem" accept="image/*">
-                    <img  style="max-width: 100%; max-height: 200px; margin-top: 10px;">
+                    <input type="hidden" name="MAX_FILE_SIZE" value="500000000" />
+                    <span id="file-size-warning">(SELECIONE UMA IMAGEM/TAMANHO MÁXIMO: 900KB)</span>
+                    <input type="file" name="imagem" id="imagem" accept="image/*" value="20000000">
+                    <img style="max-width: 100%; max-height: 200px; margin-top: 10px;">
                 </div>
                 <br></br>
                 <div class="inputBox1">
@@ -219,4 +220,5 @@ if (isset($_POST['submit'])) {
 </body>
 
 </script>
+
 </html>

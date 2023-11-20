@@ -181,8 +181,9 @@ if (!empty($_GET['id'])) {
                 <br></br>
                 <div class="inputBox2">
 
-                    <p>Escolha uma imagem:</p>
-                    <input type="file" name="imagem" id="imagem"  accept="image/*">
+                    <input type="hidden" name="MAX_FILE_SIZE" value="500000000" />
+                    <span id="file-size-warning">(SELECIONE UMA IMAGEM/TAMANHO MÁXIMO: 900KB)</span>
+                    <input type="file" name="imagem" id="imagem" accept="image/*">
                     <img style="max-width: 100%; max-height: 200px; margin-top: 10px;">
 
                 </div>
@@ -209,10 +210,11 @@ if (!empty($_GET['id'])) {
                     <label for="mdpreparo" class="labelInput">Modo de Preparo</label>
                 </div>
                 <br></br>
-                <input type="hidden" name="id" value=<?php echo $id;?>>
+                <input type="hidden" name="id" value=<?php echo $id; ?>>
                 <input type="submit" name="update" id="update">
             </fieldset>
         </form>
     </div>
 </body>
+
 </html>

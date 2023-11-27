@@ -16,6 +16,7 @@
             background-image: url(images/comida-saludable.jpg);
             background-size: cover;
             margin: 200px;
+            
 
 
         }
